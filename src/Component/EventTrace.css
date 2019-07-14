@@ -1,0 +1,90 @@
+.EventTrace-header {
+    margin-top: 30px;
+}
+.EventTrace-header button {
+    margin-left: 10px;
+    font-size: 13px;
+    background-color: rgba(22, 155, 213, 1);;
+}
+.EventTrace-header .num {
+    margin-left: 30px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    color: #A1A1A1
+}
+
+/* 中间的样式开始 */
+/* 条形图块 */
+.graph {
+    margin: 20px;
+    padding: 10px;
+}
+.ant-tag {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center
+}
+.graph p {
+    text-align: right
+}
+/* 风险指数块 */ 
+.risk {
+    margin: 20px;
+    padding: 10px
+}
+.risk p {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #434343;
+}
+.risk .ant-progress {
+    margin: 20px 40px
+}
+/* 专家意见块 */
+.suggest {
+    margin: 20px;
+    padding: 10px;
+}
+.suggest p {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #434343;
+}
+.suggest .suggest-content {
+    width: 300px;
+    height: 170px;
+    background-color: rgba(22, 155, 213, 0.109803921568627);
+    padding-top: 50px
+}
+.suggest .suggest-content div {
+    height: 70px;
+    width: 100%;
+}
+.suggest div p {
+    text-align: center;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px
+}
+/* 右边四个链接 */ 
+.right {
+    padding: 20px 10px 10px 10px;
+}
+.right ul li {
+    list-style: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.right ul li a {
+    color: #169BD5;
+}

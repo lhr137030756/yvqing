@@ -1,0 +1,65 @@
+.mySchool {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #666666;
+    margin-left: 5px;
+    margin-top: 13px;
+    display: inline-block
+}
+.mySchool:hover {
+    font-size: 28px;
+    color: rgba(77,158,221);
+}
+
+/* 上边总览 */ 
+.overView {
+    padding-left: 10px;
+}
+.overView .overView-g {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.overView .ant-input-search.ant-input-affix-wrapper, button {
+    margin-left: 20px;
+}
+.overView p {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    color: #999999;
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-bottom: 5px
+}
+
+/* 内容的顶部 */
+.content-head {
+    width: 900px;
+}
+.content-head .bread {
+    float: right;
+}
+/* 内容 */
+.content {
+    position: relative;
+    height: 180px;
+}
+.content label {
+    position:  absolute;
+    top: 50px;
+    left: 0
+}
+.ant-descriptions {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+.content .content-button {
+    position: absolute;
+    bottom: 5px;
+}

@@ -1,33 +1,64 @@
-.App {
-  text-align: center;
+@import '~antd/dist/antd.css';
+.menu {
+    height: 1000px;
+    width: 160px !important;
+    background-color: rgba(47, 161, 229, 1);
+    color: white;
+    padding-top: 150px
+}
+.ant-layout .ant-layout-sider.ant-layout-sider-dark {
+    width: 160px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+    flex: 0 0 160px !important;
+}
+.ant-layout-sider-children  li span{
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+.ant-layout-sider-children  li span  {
+    color: white
+}
+.ant-menu-item.ant-menu-item-selected {
+    color: rgba(47, 161, 229, 1) !important;
+}
+.ant-menu-item.ant-menu-item-selected span a{
+    color: rgba(47, 161, 229, 1) !important;
+}
+/* .ant-layout-sider-children  li span a.active {
+    color: rgba(47, 161, 229, 1);
+} */
+.ant-page-header {
+    padding: 0
+}
+.ant-page-header-content {
+    padding-top: 0
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* 顶部样式 */
+.extraContent {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrap {
+    width: 1500px;
+    height: 100px;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.349019607843137);
 }
+.logo {
+    width: 100%;  
+    height: 100%;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+    font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';
+    font-weight: 650;
+    font-style: normal;
+    color: #2FA1E5;
+    font-size: 24px;
 }
