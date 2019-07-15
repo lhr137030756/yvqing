@@ -1,0 +1,17 @@
+.eventBlock{
+	background-color: white;
+	margin: 10px;
+	height: 60px;
+}
+.eventTitle{
+	font-size: 18px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+.eventTime{
+	color: rgb(168,168,168);
+	margin-top: 15px;
+}
+.download{
+	
+}

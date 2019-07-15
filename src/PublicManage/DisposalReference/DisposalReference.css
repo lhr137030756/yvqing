@@ -1,0 +1,92 @@
+.df_statement {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: rgb(47,161,229);
+}
+
+/* 尖角 */
+.case_label, .statement_label{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(64, 169, 255);
+    color: white;
+}
+.case_label:before, .statement_label:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: rgb(64, 169, 255);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -15px;
+}
+
+/* 案例中的序号 */
+.number {
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(64, 169, 255);
+}
+
+/* 案例参考部分 */
+.caseTitle {
+    height: 25px;
+    text-align: center;
+    background-color: rgba(177, 171, 171, 0.753);
+}
+.caseIntroduction {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(177, 171, 171, 0.753);
+    margin-top: 10px;
+}
+
+/* 垂直虚线 */
+.dashedLine {
+    margin-top: 68px;
+    margin-left: 30px;
+    width: 1px;
+    height: 450px;
+    /* background-color: grey; */
+    border: 1px dashed rgba(177, 171, 171, 0.753);
+    /* border-style: dashed; */
+}
+
+/* 声明参考部分 */
+.statementTitle {
+    height: 25px;
+    text-align: center;
+    background-color: rgba(177, 171, 171, 0.753);
+}
+
+/* 精细匹配部分 */
+.match {
+    height: 600px;
+    margin-top: 20px;
+    background-color: rgba(25, 158, 216, 0.109803921568627);
+}
+.matchTitle {
+    height: 35px;
+    /* margin-top: 20px; */
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background-color: rgba(25, 158, 216, 0.627450980392157);
+}
+.matchSelect p {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

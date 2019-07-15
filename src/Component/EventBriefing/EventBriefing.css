@@ -1,0 +1,15 @@
+.Title{
+	margin: 10px;
+	background-color: #1890FF;
+	color:white;
+	padding: 13px;
+	width: 100px;
+	font-size: 15px;
+}
+.EventList{
+	background-color: #E6F4FB;
+	width: 880px;
+	height: 700px;
+	margin-left: 10px;
+	padding: 10px;
+}

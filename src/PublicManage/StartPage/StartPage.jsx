@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import './StartPage.css';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
-import DisposalModal from '../DisposalModal/DisposalModal.jsx';
+import DisposalModal from '../../DisposalModal/DisposalModal.jsx';
 
 export default class StartPage extends React.Component {
     

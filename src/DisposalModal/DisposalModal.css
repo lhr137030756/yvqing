@@ -1,0 +1,8 @@
+.modal_p {
+    color: #333;
+    cursor: pointer;
+}
+.modal_p:hover {
+    font-weight: 600;
+    color: #333;
+}
