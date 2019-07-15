@@ -12,6 +12,7 @@ import Report from './Component/Report.jsx'
 import RiskAssessment from './Component/RiskAssessment.jsx'
 
 import RiskAssessDetails from './Component/RiskAssessDetails.jsx'
+import CutPapper from './CutPapper.jsx'
 const {  Content,  Sider } = Layout;
 
 class SiderDemo extends React.Component {
@@ -21,6 +22,7 @@ class SiderDemo extends React.Component {
       <Layout style={{ minHeight: '900px' }}>
         <Sider>
           <Menu  className="menu" defaultSelectedKeys={['1']} mode="inline">
+            <CutPapper></CutPapper>
             <Menu.Item key="1"><Icon type="pie-chart" /><span><NavLink to='/Component/EventTrace' style={{color: 'white'}}>事件追踪</NavLink></span></Menu.Item>
             <Menu.Item key="2"><Icon type="desktop" /><span><NavLink to='/Component/PublicMonitor' style={{color: 'white'}}>舆情监控</NavLink></span></Menu.Item>
             <Menu.Item key="3"><Icon type="desktop" /><span><NavLink to='/Component/RiskAssessment' style={{color: 'white'}}>风险评估</NavLink></span></Menu.Item>

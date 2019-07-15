@@ -1,0 +1,46 @@
+/* tab写死400px宽 */
+.cut-tab {
+    width: 400px !important;
+}
+
+.left-tab,.right-tab {
+    width: 400px;
+}
+/* 左边tab栏 */
+.download {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    /* color: #FFFFFF; */
+    font-size: 18px
+}
+.left-p {
+    display: inline-block;
+    width: 300px;
+    font-family: 'ArialMT', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    vertical-align: middle;
+    margin-top: 5px
+}
+.left-del {
+    display: inline-block;
+    vertical-align: middle
+}
+
+/* 右边tab栏 */
+.right-item {
+    margin-top: 10px
+}
+.right-item-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 310px;
+    padding-top: 5px;
+    padding-left: 10px
+}
+.right-button {
+    display: inline-block;
+    vertical-align: middle;
+}
