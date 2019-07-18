@@ -38,7 +38,7 @@ class EvenetTraceContent extends React.Component {
                 <Row>
                     <Col span={8} className='graph'>
                         <Tag closable='true' color="#40a9ff" size='big'>洁洁良事件</Tag>
-                        <Button type="link" size='big'>
+                        <Button type="link" size='default'>
                             修改设置
                         </Button>
                         <p>今日新增20条</p>
@@ -67,7 +67,7 @@ class EvenetTraceContent extends React.Component {
                 <Row>
                     <Col span={8} className='graph'>
                             <Tag closable='true' color="#40a9ff" size='big'>基因编辑事件</Tag>
-                            <Button type="link" size='big'>
+                            <Button type="link" size='default'>
                                 修改设置
                             </Button>
                             <p>今日新增180条</p>
