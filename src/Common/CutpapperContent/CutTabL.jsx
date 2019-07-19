@@ -9,7 +9,7 @@ class CutTabL extends React.Component {
         }
     }
     componentDidMount = () => {
-        this.showCut()
+        this.showCut(1)
     }
     render() {
         return (
@@ -25,38 +25,26 @@ class CutTabL extends React.Component {
                 <div>
                     {this.state.cutContent.map(item => (
                         <div key={item.id}>
-                            <p className='left-p'>{item.content}</p>
+                            <p className='left-p'>
+                            <span>来源：{item.source}</span>&nbsp;&nbsp;
+                            <span>发布时间：{item.publishTime}</span><br/>
+                            <span>作者：{item.author}</span>&nbsp;&nbsp;
+                            <span>标题：{item.title}</span><br/>
+                            {item.content}
+                            </p>
                             <Button type='primary' className='left-del' onClick={this.delCut} cutid={item.id}>删除</Button>
                             <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
                         </div>
                     ))}
-                    
-                    <div>
-                        <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-                        <Button type='primary' className='left-del'>删除</Button>
-                        <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
-                    </div>
-                    <div>
-                        <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-                        <Button type='primary' className='left-del'>删除</Button>
-                        <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
-                    </div>
-                    <div>
-                        <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-                        <Button type='primary' className='left-del'>删除</Button>
-                        <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
-                    </div>
                     <Pagination  onChange={this.showCut} defaultCurrent={1} total={100} pageSize='5' />
                 </div>
             </div>
         )
     }
     showCut = (e) => {
-        // let pageSize = e
-        // console.log(pageSize)
         let param = new URLSearchParams()
         param.append('user_id', '9')
-        param.append('page', 2)
+        param.append('page', e)
         axios({
             method: 'post',
             url: 'http://47.104.142.230:8848/scrap/brief/display',
@@ -64,19 +52,18 @@ class CutTabL extends React.Component {
         })
         .then(res => {
             console.log(res.data)
-            if(res.data.success) {
+            if(res.data.event === 0) {
                 this.setState({
                     cutContent: res.data.obj
                 })
             }
         })
         .catch(err => {
-            console.log('出现错误')
+            alert('出现错误')
         })
     }
     delCut = (e) => {
         let cutID = e.target.getAttribute('cutid')
-        console.log(e.target.getAttribute('cutid'))
         let param = new URLSearchParams()
         param.append('id', cutID)
         axios({
@@ -86,12 +73,15 @@ class CutTabL extends React.Component {
         })
         .then(res => {
             console.log(res.data)
+            if(res.data.error_code === 0) {
+                alert("删除成功")
+                this.showCut(e)
+            }
         })
         .catch(err => {
-            console.log('出现错误')
+            alert('出现错误')
         })
-
-        this.showCut()
+        this.showCut(e)
     }
 }
 

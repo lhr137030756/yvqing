@@ -1,6 +1,7 @@
 import React from 'react' 
 import {Button, Modal, Tabs,Input,DatePicker} from 'antd'
 import './AddEvent.css'
+import axios from 'axios';
 const { RangePicker } = DatePicker;
 class AddEvent extends React.Component {
     constructor(props) {
@@ -97,13 +98,12 @@ class AddEvent extends React.Component {
         })
     }
     changeFn = (e) => {
-        console.log('e',e.target.value)
+        // console.log('e',e.target.value)
         this.setState({
             [e.target.name]: e.target.value
         })
     }
     createPeriod =(pr) => {
-        // console.log(pr)
         this.setState({
             period: pr
         })
@@ -111,6 +111,28 @@ class AddEvent extends React.Component {
     createSave =() => {
         this.setModalVisible2(false)
         console.log('state',this.state)
+        let eventjson = new URLSearchParams()
+        eventjson.append('name', '测试事件')
+        eventjson.append('keyword', '厦门大学and社会')
+        eventjson.append('excludeword', '985or211')
+        eventjson.append('start', 1563155445429)
+        eventjson.append('end', 1563155445429)
+        eventjson.append('period', 0)
+        axios({
+            method: 'post',
+            url: 'http://47.104.142.230:8848/trace/event/addevent',
+            data: eventjson,
+           headers:{'Content-Type':'application/x-www-form-urlencoded'}
+        })
+        .then(res => {
+            console.log(res.data)
+            if(res.data.error_code === 1) {
+                alert("添加事件成功！")
+            }
+        })
+        .catch(err => {
+            alert('出现错误')
+        })
     }
 }
 

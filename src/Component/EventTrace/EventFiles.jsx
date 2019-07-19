@@ -22,7 +22,6 @@ class EventFiles extends React.Component {
                 <span style={{marginLeft: '20px'}}>排序</span>
                 <Search
                     placeholder="输入关键词搜素"
-                    // onSearch={value => console.log(value)}
                     style={{ width: 300, marginLeft: '30px' }}
                 />
                 <button>搜素</button>
@@ -58,12 +57,12 @@ class EventFiles extends React.Component {
         // .catch(err => {
         //     console.log('出现错误')
         // })
-        axios.post('http://47.104.142.230:8848/trace/event/file')
+        axios.get('http://47.104.142.230:8848/trace/event/file')
         .then(res => {
             this.setState({
                 filelist:res.data.eventlist
             })
-            // console.log(this.state.filelist)
+            // console.log(res.data)
         })
         .catch(err => {
             alert("请求失败")
