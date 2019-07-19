@@ -22,7 +22,11 @@
     font-style: normal;
     font-size: 13px;
     vertical-align: middle;
-    margin-top: 5px
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    height: 100px;
 }
 .left-del {
     display: inline-block;

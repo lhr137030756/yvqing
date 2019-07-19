@@ -20,13 +20,14 @@ class HotWord extends React.Component {
             this.setState({
                 wordImg : res.data.obj
             })
+            
         })
     }
     render() {
         return (
             <div>
                 <div className='details-tag'>焦点热刺</div>
-                <img src="data:image/png;base64,wordImg" className="images" border="5px" alt='焦点热词'></img>
+                <img src='data:image/png;base64,this.state.wordImg' className="images" border="5px" alt='焦点热词'></img>
                 {/* <img src='data:image/jpg;base64,${wordImg}' class="images" border="5px" alt='焦点热词'/> */}
             </div>
         )

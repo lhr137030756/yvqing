@@ -1,6 +1,6 @@
 import React from 'react' 
 import axios from 'axios'
-import {Button, Divider, Pagination} from 'antd'
+import {Button,  Pagination, Divider} from 'antd'
 class CutTabL extends React.Component {
     constructor(props) {
         super(props)
@@ -9,17 +9,7 @@ class CutTabL extends React.Component {
         }
     }
     componentDidMount = () => {
-        // let param = new URLSearchParams()
-        // param.append('api_token', 'admin')
-        // param.append('name', '洁洁良')
-        // axios({
-        //     method: 'post',
-        //     url: 'http://47.104.142.230:8848/trace/event/index/get_todaynew',
-        //     data: param
-        // })
-        // .then(res => {
-        //     console.log(res.data)
-        // })
+        this.showCut()
     }
     render() {
         return (
@@ -33,6 +23,13 @@ class CutTabL extends React.Component {
                     <Button size='small'>一键清空</Button>
                 </div>
                 <div>
+                    {this.state.cutContent.map(item => (
+                        <div key={item.id}>
+                            <p className='left-p'>{item.content}</p>
+                            <Button type='primary' className='left-del' onClick={this.delCut} cutid={item.id}>删除</Button>
+                            <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
+                        </div>
+                    ))}
                     
                     <div>
                         <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
@@ -49,19 +46,42 @@ class CutTabL extends React.Component {
                         <Button type='primary' className='left-del'>删除</Button>
                         <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
                     </div>
-                    {/* <Pagination defaultCurrent={1} total={10} pageSize='2' onChange={this.pageClick} ></Pagination> */}
-                    <Pagination  onChange={this.pageClick} defaultCurrent={3} total={100} />
+                    <Pagination  onChange={this.showCut} defaultCurrent={1} total={100} pageSize='5' />
                 </div>
             </div>
         )
     }
-    pageClick = (e) => {
-        console.log(e)
+    showCut = (e) => {
+        // let pageSize = e
+        // console.log(pageSize)
         let param = new URLSearchParams()
-        param.append('user_id', 'admin')
+        param.append('user_id', '9')
+        param.append('page', 2)
         axios({
             method: 'post',
-            url: 'http://47.104.142.230:8848/scrap/history/display',
+            url: 'http://47.104.142.230:8848/scrap/brief/display',
+            data: param
+        })
+        .then(res => {
+            console.log(res.data)
+            if(res.data.success) {
+                this.setState({
+                    cutContent: res.data.obj
+                })
+            }
+        })
+        .catch(err => {
+            console.log('出现错误')
+        })
+    }
+    delCut = (e) => {
+        let cutID = e.target.getAttribute('cutid')
+        console.log(e.target.getAttribute('cutid'))
+        let param = new URLSearchParams()
+        param.append('id', cutID)
+        axios({
+            method: 'post',
+            url: 'http://47.104.142.230:8848/scrap/brief/delete',
             data: param
         })
         .then(res => {
@@ -70,9 +90,8 @@ class CutTabL extends React.Component {
         .catch(err => {
             console.log('出现错误')
         })
-    }
-    onShowSizeChange = () => {
 
+        this.showCut()
     }
 }
 

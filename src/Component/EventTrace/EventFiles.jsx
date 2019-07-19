@@ -27,12 +27,6 @@ class EventFiles extends React.Component {
                 />
                 <button>搜素</button>
                 <hr/>
-                {/* <div className='files-item'>
-                    <span className='item-name'>洁洁良事件</span>
-                    <span className='item-time'>2019-4-10 16：33</span>
-                    <span className='back-trace'>重返追踪</span>
-                    <span className='check-risk'>查看风险评估</span>
-                </div> */}
                 {this.state.filelist.map((item,index) => (
                     item.is_traced?
                     <div className='files-item' key={index}> 

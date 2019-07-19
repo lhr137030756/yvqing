@@ -1,4 +1,5 @@
 import React from 'react' 
+import AddEvent from './AddEvent/AddEvent.jsx'
 import { Button, Row, Col, Tag, Progress } from 'antd';
 import './EventTrace.css';
 import {withRouter } from 'react-router-dom'
@@ -9,7 +10,8 @@ class EventTrace extends React.Component {
             <Row>
                 <Col span={24} className='EventTrace-header'>
                     <Button type="primary">汇总简报下载</Button>
-                    <Button type="primary">添加事件</Button>
+                    {/* <Button type="primary">添加事件</Button> */}
+                    <AddEvent></AddEvent>
                     <Button type="primary">移入事件档案</Button>
                     <Button type="primary" onClick={this.goEventFiles}>事件档案</Button>
                     <span className='num'>*事件追踪上限为5，您正在追踪2起事件！</span>
