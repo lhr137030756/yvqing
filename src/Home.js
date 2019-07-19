@@ -18,6 +18,7 @@ import DisposalReference from './Component/PublicManage/PublicManage/DisposalRef
 import DisposalAdvice from './Component/PublicManage/PublicManage/DisposalAdvice/DisposalAdvice.jsx'
 import AftereffectEvaluation from './Component/PublicManage/PublicManage/AftereffectEvaluation/AftereffectEvaluation.jsx'
 import CutPapper from './Common/CutPapper.jsx'
+import EventFiles from './Component/EventTrace/EventFiles.jsx';
 const {  Content,  Sider } = Layout;
 
 class SiderDemo extends React.Component {
@@ -66,9 +67,11 @@ class SiderDemo extends React.Component {
               <Route path='/home/RiskAssessment' component={RiskAssessment}></Route>
 
               <Route path='/home/RiskAssessDetails' component={RiskAssessDetails}></Route>
+
+              <Route path='/home/EventFiles' component={EventFiles}></Route>
             </Switch>
           </Content>
-          {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
+          
         </Layout>
       </Layout>
       // </HashRouter>

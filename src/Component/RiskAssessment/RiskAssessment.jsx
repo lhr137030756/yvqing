@@ -76,9 +76,9 @@ class RiskAssessment extends React.Component {
                                 <br/><br/>
                                 起止时间：<RangePicker  />
                                 <br /><br/>
-                                <Button shape='round' size='big'>当天</Button>
-                                <Button shape='round' size='big'>近一周</Button>
-                                <Button shape='round' size='big'>近一月</Button>
+                                <Button shape='round' >当天</Button>
+                                <Button shape='round' >近一周</Button>
+                                <Button shape='round' >近一月</Button>
                                 <Button className='next'>下一步</Button>
                                 </Tabs.TabPane>
                                 <Tabs.TabPane tab="Step3.补充材料" key="3">

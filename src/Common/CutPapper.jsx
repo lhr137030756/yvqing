@@ -1,20 +1,9 @@
 import React from 'react' 
 import { Popover, Button, Tabs, Divider } from 'antd';
 import './CutPapper.css'
+import CutTabL from './CutpapperContent/CutTabL.jsx'
 const {TabPane} = Tabs
-// const content = (
-//     <div>
-//       <p>123456</p>
-//         <Tabs defaultActiveKey="1">
-//             <TabPane tab="剪报内容" key="1">
-//                 123
-//             </TabPane>
-//             <TabPane tab="历史纪录" key="2">
-//             Content of Tab Pane 2
-//             </TabPane>
-//         </Tabs>
-//     </div>
-//   );
+
 class CutPapper extends React.Component {
     render() {
         return (
@@ -43,34 +32,34 @@ class CutTab extends React.Component {
         )
     }
 }
-class CutTabL extends React.Component {
-    render() {
-        return (
-            <div className='left-tab'>
-                <div>
-                    <span>共6条内容</span>&nbsp;&nbsp;
-                    <span className='download'>下载：</span>
-                    <span>word</span>
-                    <span>word</span>
-                    <span>word</span>
-                    <Button size='small'>一键清空</Button>
-                </div>
-                <div>
-                    <div>
-                        <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-                        <Button type='primary' className='left-del'>删除</Button>
-                        <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
-                    </div>
-                    <div>
-                        <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-                        <Button type='primary' className='left-del'>删除</Button>
-                        <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
+// class CutTabL extends React.Component {
+//     render() {
+//         return (
+//             <div className='left-tab'>
+//                 <div>
+//                     <span>共6条内容</span>&nbsp;&nbsp;
+//                     <span className='download'>下载：</span>
+//                     <span>word</span>
+//                     <span>word</span>
+//                     <span>word</span>
+//                     <Button size='small'>一键清空</Button>
+//                 </div>
+//                 <div>
+//                     <div>
+//                         <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
+//                         <Button type='primary' className='left-del'>删除</Button>
+//                         <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
+//                     </div>
+//                     <div>
+//                         <p className='left-p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
+//                         <Button type='primary' className='left-del'>删除</Button>
+//                         <Divider style={{marginTop: '0px', marginBottom: '0px'}}/>
+//                     </div>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
 class CutTabR extends React.Component {
     render() {
         return (

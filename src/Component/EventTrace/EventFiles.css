@@ -1,0 +1,55 @@
+.event-files {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 800px;
+}
+
+.files-word {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #666666;
+}
+.files-num {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 30px
+}
+/* 每个事件的样式 */
+.files-item {
+    width: 830px;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.349019607843137);
+    margin-top: 20px;
+    background-color: #fff;
+}
+.files-item .item-name {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+    display: inline-block;
+    width: 400px;
+}
+.files-item .item-time {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    color: #949494;
+    margin-left: 50px
+}
+.files-item .check-risk,.back-trace {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #666666;
+    margin-left: 30px
+}

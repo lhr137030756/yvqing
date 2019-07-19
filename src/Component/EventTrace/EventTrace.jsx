@@ -1,35 +1,52 @@
 import React from 'react' 
 import { Button, Row, Col, Tag, Progress } from 'antd';
 import './EventTrace.css';
+import {withRouter } from 'react-router-dom'
 class EventTrace extends React.Component {
     render() {
         return (
             <div>
-                <EventTraceHeader></EventTraceHeader>
-                <EvenetTraceContent></EvenetTraceContent>
-            </div>
-        )
-    }
-}
-export default EventTrace
-
-// 头部组件
-class EventTraceHeader extends React.Component {
-    render() {
-        return (
             <Row>
                 <Col span={24} className='EventTrace-header'>
                     <Button type="primary">汇总简报下载</Button>
                     <Button type="primary">添加事件</Button>
                     <Button type="primary">移入事件档案</Button>
-                    <Button type="primary">事件档案</Button>
+                    <Button type="primary" onClick={this.goEventFiles}>事件档案</Button>
                     <span className='num'>*事件追踪上限为5，您正在追踪2起事件！</span>
                 </Col>
             </Row>
+            <EvenetTraceContent></EvenetTraceContent>
+            </div>
         )
     }
+    goEventFiles = (e) => {
+        let {history} = this.props
+        history.push('/home/EventFiles')
+    }
 }
+export default withRouter(EventTrace)
 
+// 头部组件
+// class EventTraceHeader extends React.Component {
+
+    
+//     render() {
+//         return (
+//             <Row>
+//                 <Col span={24} className='EventTrace-header'>
+//                     <Button type="primary">汇总简报下载</Button>
+//                     <Button type="primary">添加事件</Button>
+//                     <Button type="primary">移入事件档案</Button>
+//                     <Button type="primary" onClick={this.goEventFiles}>事件档案</Button>
+//                     <span className='num'>*事件追踪上限为5，您正在追踪2起事件！</span>
+//                 </Col>
+//             </Row>
+//         )
+//     }
+//     goEventFiles = (e) => {
+//         this.props.history.push('/home/EventFiles')
+//     }
+// }
 // 内容组件
 class EvenetTraceContent extends React.Component {
     render() {

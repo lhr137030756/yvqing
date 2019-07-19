@@ -29,7 +29,7 @@ class PublicMonitorLeftHead extends React.Component {
         return (
             <div>
                 <span className='mySchool'>我校动态</span>
-                <div class='overView'>
+                <div className='overView'>
                     <span className='overView-g'>总览</span>
                     <Search
                         placeholder="清输入关键词，回车搜索"
@@ -51,7 +51,7 @@ class PublicMonitorOverView extends React.Component {
         return (
             <div className='content-head'>
                 <Checkbox>全选</Checkbox>
-                <a href>加入简报</a>
+                <a href='true'>加入简报</a>
                 <Breadcrumb className='bread'>
                     <Breadcrumb.Item>
                     <span>按时间排序</span>
@@ -68,7 +68,7 @@ class PublicMonitorContent extends React.Component {
     render() {
         return (
             <div>
-                <div class='content'>
+                <div className='content'>
                     <Checkbox></Checkbox>
                     <Descriptions
                     title="还好我毕业了@全球校园事儿发表于2019/4/30 ..."
@@ -90,7 +90,7 @@ class PublicMonitorContent extends React.Component {
                 </div>
                 <hr style={{color: '#cccccc', marginTop: 0}}></hr>
 
-                <div class='content'>
+                <div className='content'>
                     <Checkbox></Checkbox>
                     <Descriptions
                     title="还好我毕业了@全球校园事儿发表于2019/4/30 ..."
